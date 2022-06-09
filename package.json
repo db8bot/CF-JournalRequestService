@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/db8bot/Occulation-CloudFunction#readme",
   "dependencies": {
+    "@db8bot/ddosguard-bypass": "^1.0.0",
     "@google-cloud/functions-framework": "^3.1.2",
     "axios": "^0.27.2",
     "cheerio": "^1.0.0-rc.11",
