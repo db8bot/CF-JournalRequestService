@@ -1,0 +1,24 @@
+{
+  "name": "occulation-cloudfunction",
+  "version": "1.0.0",
+  "description": "Cloud Function handling only the sci-hub.se access part of db8bot. Results are combined to the host compute engine.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/db8bot/Occulation-CloudFunction.git"
+  },
+  "author": "AirFusion45",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/db8bot/Occulation-CloudFunction/issues"
+  },
+  "homepage": "https://github.com/db8bot/Occulation-CloudFunction#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cheerio": "^1.0.0-rc.11",
+    "qs": "^6.10.5"
+  }
+}
