@@ -1,11 +1,13 @@
 const axios = require('axios')
 const qs = require('qs')
 const cheerio = require('cheerio')
+const functions = require('@google-cloud/functions-framework')
 
-exports.sepaper = async (req, resApp) => {
+functions.http('sepaperPOST', (req, resApp) => {
 
     let inData = JSON.parse(req.body)
     let query = inData.query
+    // let query = 'https://doi.org/10.1515/sem-2017-0088'
 
     let normalHeaders = {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -35,9 +37,13 @@ exports.sepaper = async (req, resApp) => {
             if (matching.indexOf('/') === 0 && !matching.includes('//') && !matching.includes('sci-hub.se')) matching = `https://sci-hub.se${matching}`
 
             if (matching) resApp.status(200).send(matching)
+            // if (matching) console.log(matching)
         } catch (e) {
             resApp.sendStatus(404)
+            // console.log('no')
             return
         }
+    }).catch(err => {
+        console.log(err)
     })
-}
+});
