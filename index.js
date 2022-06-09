@@ -5,8 +5,7 @@ const functions = require('@google-cloud/functions-framework')
 
 functions.http('sepaperPOST', (req, resApp) => {
 
-    let inData = JSON.parse(req.body)
-    let query = inData.query
+    let query = req.body.query
     // let query = 'https://doi.org/10.1515/sem-2017-0088'
 
     let normalHeaders = {
